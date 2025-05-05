@@ -9,8 +9,16 @@ import userRoute from "./route/user.route.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https://book-store-ten-pied.vercel.app"],
+        methods:["POST" , "GET"],
+        credentials: true
+    }
+));
 app.use(express.json());
+
+mongoose.connect('mongodb+srv://evaibhav0000:<Vaibhav@#$&2>@cluster0.gpg2ztw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 // 📦 Routes
 app.use("/user", userRoute);
