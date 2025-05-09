@@ -36,7 +36,7 @@ function Login() {
     };
 
     await axios
-      .post("https://book-store-3nng-api.vercel.app/", userInfo)
+      .post("https://book-store-3nng-api.vercel.app/user/login", userInfo)
       .then((res) => {
         if (res.data) {
           toast.success('Login Successfully');
