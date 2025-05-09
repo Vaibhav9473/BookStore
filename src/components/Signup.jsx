@@ -18,7 +18,7 @@ function Signup() {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:4001/user/signup", data);
+      const res = await axios.post("https://book-store-3nng-api.vercel.app/user/signup", data);
       toast.success("Signup successful!");
       navigate(from, { replace: true });
     } catch (err) {
