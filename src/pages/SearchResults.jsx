@@ -12,7 +12,7 @@ const SearchResults = () => {
 
   useEffect(() => {
     // Example: fetch all books from your backend
-    fetch('http://localhost:5000/api/books')
+    fetch('https://book-store-3nng-api.vercel.app/api/books')
       .then(res => res.json())
       .then(data => setBooks(data))
       .catch(err => console.error('Error fetching books:', err));
